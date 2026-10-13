@@ -345,7 +345,7 @@ textarea.t{min-height:90px; resize:vertical;}
 /* ================= config ================= */
 /* Paste your Gumroad product link here to enable the Buy button.
    Leave empty ("") and the button stays hidden until you set it. */
-const GUMROAD_URL = "";
+const GUMROAD_URL = "https://samiwave244.gumroad.com/l/resume-builder-premium";
 
 const LS_RESUMES = "rb_resumes_v1";
 const LS_PREMIUM = "rb_premium_v1";
@@ -769,7 +769,7 @@ function shareTextResume(){
 function openPremium(){
   $("keyOk").style.display="none"; $("keyErr").style.display="none";
   $("premActive").style.display=premium?"block":"none";
-  $("buyRow").style.display=GUMROAD_URL?"flex":"none";
+  $("buyRow").style.display=(GUMROAD_URL&&!PREMIUM_BUILD)?"flex":"none";
   $("premiumModal").classList.remove("hidden");
 }
 function closePremium(){ $("premiumModal").classList.add("hidden"); }
