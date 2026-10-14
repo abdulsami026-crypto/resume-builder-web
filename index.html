@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resume Builder — Designer CVs in minutes</title>
-<meta name="description" content="Build a job-winning resume in minutes. 13 designer templates, perfect A4 PDFs, 100% offline. Free to start.">
+<meta name="description" content="Build a job-winning resume in minutes. 25 designer templates, perfect A4 PDFs, 100% offline. Free to start.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -146,6 +146,17 @@
   .final h2{font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.4px;margin-bottom:16px;}
   .final p{color:#c9d4ea;font-size:18px;margin-bottom:34px;}
 
+  /* scroll reveal */
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+  .rv.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none;}}
+  /* hero template switcher */
+  .sw-dots{display:flex;gap:9px;justify-content:center;margin-top:14px;}
+  .sw-dots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.32);cursor:pointer;padding:0;transition:background .2s,transform .2s;}
+  .sw-dots button.on{background:#fbbf24;transform:scale(1.3);}
+  .hero-shot img{transition:opacity .25s;}
+  .free-tag{background:#dcfce7;color:#166534;font-weight:800;font-size:12px;border-radius:999px;padding:4px 12px;}
+
   footer{background:#070f26;color:#8b98b8;padding:40px 0;font-size:14.5px;}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
   footer a{color:#c9d4ea;}
@@ -165,21 +176,24 @@
   <div>
     <span class="pill">100% free to start · No account needed</span>
     <h1>Build a <span class="hl">job-winning resume</span> in minutes.</h1>
-    <p class="sub">13 designer templates. Perfect A4 PDFs. Photo options, 8 accent colors, unlimited resumes — on your phone or in your browser, completely offline.</p>
+    <p class="sub">25 designer templates. Perfect A4 PDFs. Photo options, 8 accent colors, unlimited resumes — on your phone or in your browser, completely offline.</p>
     <div class="cta-row">
       <a class="btn btn-blue" href="app/">Start building — free</a>
       <a class="btn btn-ghost" href="https://samiwave244.gumroad.com/l/resume-builder-premium">Get Premium — $9</a>
     </div>
     <div class="stats">
-      <div><b>13</b>templates</div>
+      <div><b>25</b>templates</div>
       <div><b>A4</b>PDF export</div>
       <div><b>100%</b>offline</div>
     </div>
   </div>
   <div>
-    <div class="hero-shot">
-      <img src="img/onyx.png" alt="Onyx resume template">
-      <div class="cap"><span>Onyx — one of 10 premium templates</span><span class="pro-tag">PRO</span></div>
+    <div>
+      <div class="hero-shot">
+        <img id="swImg" src="img/onyx.png" alt="Onyx resume template">
+        <div class="cap"><span id="swCap">Onyx — one of 20 premium templates</span><span id="swTag" class="pro-tag">PRO</span></div>
+      </div>
+      <div class="sw-dots" id="swDots"></div>
     </div>
   </div>
 </div></header>
@@ -197,6 +211,8 @@
     <div class="tcard"><div class="im"><img src="img/cobalt.png" alt="Cobalt template" loading="lazy"></div><div class="nm">Cobalt <span class="badge b-pro">PRO</span></div><div class="desc">Confident blue sidebar layout.</div></div>
     <div class="tcard"><div class="im"><img src="img/portrait.png" alt="Portrait template" loading="lazy"></div><div class="nm">Portrait <span class="badge b-pro">PRO</span></div><div class="desc">Photo-forward leadership look.</div></div>
     <div class="tcard"><div class="im"><img src="img/timeline.png" alt="Timeline template" loading="lazy"></div><div class="nm">Timeline <span class="badge b-pro">PRO</span></div><div class="desc">Your career story on a year rail.</div></div>
+    <div class="tcard"><div class="im"><img src="img/aurora.png" alt="Aurora template" loading="lazy"></div><div class="nm">Aurora <span class="badge b-pro">PRO</span></div><div class="desc">Violet-gradient band header.</div></div>
+    <div class="tcard"><div class="im"><img src="img/midnight.png" alt="Midnight template" loading="lazy"></div><div class="nm">Midnight <span class="badge b-pro">PRO</span></div><div class="desc">Deep navy sidebar, gold accents.</div></div>
   </div>
 </div></section>
 
@@ -206,7 +222,7 @@
     <h2>Everything a resume needs. Nothing it doesn't.</h2>
   </div>
   <div class="feat-grid">
-    <div class="feat"><div class="e">🎨</div><h3>13 designer templates</h3><p>Sidebar layouts, timelines, photo-forward headers — 3 free forever, 10 premium.</p></div>
+    <div class="feat"><div class="e">🎨</div><h3>25 designer templates</h3><p>Sidebar layouts, timelines, photo-forward headers — 5 free forever, 20 premium.</p></div>
     <div class="feat"><div class="e">📄</div><h3>Perfect A4 PDFs</h3><p>One-tap export with crisp typography, ready for email and job portals worldwide.</p></div>
     <div class="feat"><div class="e">📷</div><h3>Photo options</h3><p>Circle or square photo — or skip it entirely, for countries that prefer no photo.</p></div>
     <div class="feat"><div class="e">📑</div><h3>Unlimited resumes</h3><p>Keep one resume per application. Duplicate and tailor each in seconds.</p></div>
@@ -222,7 +238,7 @@
   </div>
   <div class="steps">
     <div class="step"><div class="n">1</div><h3>Fill in your details</h3><p>Experience, education, skills — with an optional photo. Your entries save automatically.</p></div>
-    <div class="step"><div class="n">2</div><h3>Pick a template</h3><p>Preview all 13 designs live with your own content. Switch anytime — nothing to redo.</p></div>
+    <div class="step"><div class="n">2</div><h3>Pick a template</h3><p>Preview all 25 designs live with your own content. Switch anytime — nothing to redo.</p></div>
     <div class="step"><div class="n">3</div><h3>Export the PDF</h3><p>One tap creates a print-perfect A4 PDF. Send it straight to employers.</p></div>
   </div>
 </div></section>
@@ -238,7 +254,7 @@
       <h3>Android app</h3>
       <p style="color:var(--mut);font-size:15.5px;margin:8px 0 4px;">Direct download, no Play Store needed.<br>v1.4 · 37 KB · installs in 2 minutes.</p>
       <ul>
-        <li>3 free templates, unlimited resumes</li>
+        <li>5 free templates, unlimited resumes</li>
         <li>A4 PDF export, 100% offline</li>
         <li>Premium unlocks inside the app</li>
       </ul>
@@ -249,9 +265,9 @@
       <h3>Web app</h3>
       <p style="color:var(--mut);font-size:15.5px;margin:8px 0 4px;">Nothing to install. Works on iPhone, Android and desktop, right in the browser.</p>
       <ul>
-        <li>Same 3 free templates</li>
+        <li>Same 5 free templates</li>
         <li>Resumes save in your browser</li>
-        <li>Premium key unlocks all 13</li>
+        <li>Premium key unlocks all 25</li>
       </ul>
       <a class="btn btn-outline" href="app/">Open web app — free</a>
       <p style="color:var(--mut);font-size:13.5px;margin-top:14px;">The easiest way to try it — no download at all.</p>
@@ -283,7 +299,7 @@
       <h3>Premium</h3>
       <div class="price">$9<small> one-time</small></div>
       <ul>
-        <li>All 13 designer templates</li>
+        <li>All 25 designer templates</li>
         <li>Sidebar, timeline & portrait layouts</li>
         <li>Premium Android app (APK)</li>
         <li>Web + iPhone unlock key</li>
@@ -303,7 +319,7 @@
     <div class="qa"><button>Is my data private?<span class="chev">▾</span></button><div class="a">Completely. The app works 100% offline — everything is stored on your device. No account, no cloud, no tracking, no ads.</div></div>
     <div class="qa"><button>How do I install the Android app?<span class="chev">▾</span></button><div class="a">Download the APK, open it on your phone, allow "Install unknown apps" when asked (normal for apps outside the Play Store), tap Install. A step-by-step guide is included with your purchase.</div></div>
     <div class="qa"><button>Does it work on iPhone?<span class="chev">▾</span></button><div class="a">Yes — use the free web version in Safari and unlock it with the premium key from your purchase. The web version works on any device with a browser.</div></div>
-    <div class="qa"><button>What do I get for $9?<span class="chev">▾</span></button><div class="a">All 13 templates (10 premium ones), the premium Android app, a web unlock key, and free lifetime updates. One payment, no subscription.</div></div>
+    <div class="qa"><button>What do I get for $9?<span class="chev">▾</span></button><div class="a">All 25 templates (20 premium ones), the premium Android app, a web unlock key, and free lifetime updates. One payment, no subscription.</div></div>
     <div class="qa"><button>What if it doesn't work for me?<span class="chev">▾</span></button><div class="a">Reply to your Gumroad receipt email and we'll sort it out — every buyer gets direct support.</div></div>
   </div>
 </div></section>
@@ -341,6 +357,35 @@
 document.querySelectorAll('.qa button').forEach(b=>{
   b.addEventListener('click',()=>b.parentElement.classList.toggle('open'));
 });
+/* hero template switcher */
+(function(){
+  var T=[["img/onyx.png","Onyx",1],["img/aurora.png","Aurora",1],["img/midnight.png","Midnight",1],["img/modern.png","Modern",0]];
+  var img=document.getElementById('swImg'),cap=document.getElementById('swCap'),
+      tag=document.getElementById('swTag'),dots=document.getElementById('swDots'),i=0,timer=null;
+  T.forEach(function(t,n){var b=document.createElement('button');b.setAttribute('aria-label',t[1]);
+    b.addEventListener('click',function(){show(n);restart();});dots.appendChild(b);});
+  function show(n){i=n;var d=dots.querySelectorAll('button');
+    d.forEach(function(b,m){b.classList.toggle('on',m===i);});
+    img.style.opacity=0;
+    setTimeout(function(){img.src=T[i][0];img.alt=T[i][1]+' resume template';
+      cap.textContent=T[i][1]+(T[i][2]?' — one of 20 premium templates':' — free forever');
+      tag.textContent=T[i][2]?'PRO':'FREE';tag.className=T[i][2]?'pro-tag':'free-tag';
+      img.style.opacity=1;},200);}
+  function restart(){clearInterval(timer);timer=setInterval(function(){show((i+1)%T.length);},4200);}
+  img.parentElement.addEventListener('mouseenter',function(){clearInterval(timer);});
+  img.parentElement.addEventListener('mouseleave',restart);
+  show(0);restart();
+})();
+/* scroll reveal */
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+  var els=document.querySelectorAll('.sec-head,.tcard,.feat,.step,.plan,.qa,.hero .wrap>div');
+  els.forEach(function(el,n){el.classList.add('rv');
+    if(el.classList.contains('tcard')||el.classList.contains('feat')||el.classList.contains('step'))
+      el.style.transitionDelay=((n%3)*90)+'ms';
+    io.observe(el);});
+})();
 document.getElementById('copyLink').addEventListener('click',()=>{
   navigator.clipboard.writeText('https://abdulsami026-crypto.github.io/resume-builder-web/').then(()=>{
     var m=document.getElementById('copyMsg'); m.style.display='block';
