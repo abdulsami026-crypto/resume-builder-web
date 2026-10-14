@@ -29,7 +29,9 @@
   .links{display:flex;gap:26px;}
   .links a{color:#c9d4ea;font-size:15px;font-weight:500;}
   .links a:hover{color:#fff;}
-  .btn{display:inline-block;font-weight:700;border-radius:12px;padding:13px 26px;font-size:16px;transition:transform .12s,box-shadow .12s;}
+  .btn{display:inline-block;font-weight:700;border-radius:12px;padding:13px 26px;font-size:16px;transition:transform .12s,box-shadow .12s;cursor:pointer;}
+  .btn-outline{background:#fff;color:var(--blue);border:2px solid var(--blue);box-shadow:none;}
+  .btn-outline:hover{background:#eff4ff;}
   .btn:active{transform:scale(.97);}
   .btn-gold{background:linear-gradient(180deg,#fbbf24,#f59e0b);color:#3a2703;box-shadow:0 6px 20px rgba(245,158,11,.35);}
   .btn-gold:hover{box-shadow:0 8px 26px rgba(245,158,11,.5);}
@@ -148,7 +150,7 @@
   <a class="brand" href="#top"><span class="ic">📄</span>Resume Builder</a>
   <div class="links">
     <a href="#templates">Templates</a><a href="#features">Features</a>
-    <a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    <a href="#download">Download</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
   </div>
   <a class="btn btn-gold btn-sm" href="https://samiwave244.gumroad.com/l/resume-builder-premium">Get Premium — $9</a>
 </div></nav>
@@ -219,6 +221,38 @@
   </div>
 </div></section>
 
+<section id="download" style="background:var(--bg);"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Download</div>
+    <h2>Get the app, your way</h2>
+    <p>Free forever. Pick the version that fits your device.</p>
+  </div>
+  <div class="plans">
+    <div class="plan">
+      <h3>Android app</h3>
+      <p style="color:var(--mut);font-size:15.5px;margin:8px 0 4px;">Direct download, no Play Store needed.<br>v1.4 · 37 KB · installs in 2 minutes.</p>
+      <ul>
+        <li>3 free templates, unlimited resumes</li>
+        <li>A4 PDF export, 100% offline</li>
+        <li>Premium unlocks inside the app</li>
+      </ul>
+      <a class="btn btn-blue" href="downloads/resume-app.apk" download>Download APK — free</a>
+      <p style="color:var(--mut);font-size:13.5px;margin-top:14px;">On your phone, allow "Install unknown apps" when asked — that's normal outside the Play Store.</p>
+    </div>
+    <div class="plan">
+      <h3>Web app</h3>
+      <p style="color:var(--mut);font-size:15.5px;margin:8px 0 4px;">Nothing to install. Works on iPhone, Android and desktop, right in the browser.</p>
+      <ul>
+        <li>Same 3 free templates</li>
+        <li>Resumes save in your browser</li>
+        <li>Premium key unlocks all 13</li>
+      </ul>
+      <a class="btn btn-outline" href="app/">Open web app — free</a>
+      <p style="color:var(--mut);font-size:13.5px;margin-top:14px;">The easiest way to try it — no download at all.</p>
+    </div>
+  </div>
+</div></section>
+
 <section id="pricing"><div class="wrap">
   <div class="sec-head">
     <div class="kicker">Pricing</div>
@@ -268,6 +302,21 @@
   </div>
 </div></section>
 
+<section id="share"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Spread the word</div>
+    <h2>Know someone job hunting?</h2>
+    <p>Send them the free builder — it takes 10 seconds.</p>
+  </div>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a class="btn btn-blue" target="_blank" rel="noopener" href="https://wa.me/?text=Build%20a%20job-winning%20resume%20in%20minutes%20%E2%80%94%20free%3A%20https%3A%2F%2Fabdulsami026-crypto.github.io%2Fresume-builder-web%2F">WhatsApp</a>
+    <a class="btn btn-outline" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=Build%20a%20job-winning%20resume%20in%20minutes%20%E2%80%94%20free%20resume%20builder&url=https%3A%2F%2Fabdulsami026-crypto.github.io%2Fresume-builder-web%2F">X</a>
+    <a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fabdulsami026-crypto.github.io%2Fresume-builder-web%2F">Facebook</a>
+    <button class="btn btn-outline" id="copyLink" type="button">Copy link</button>
+  </div>
+  <p id="copyMsg" style="text-align:center;color:#16a34a;font-weight:600;margin-top:14px;display:none;">Link copied ✓</p>
+</div></section>
+
 <section class="final"><div class="wrap">
   <h2>Your next job starts with a better resume.</h2>
   <p>Free to start. $9 to unlock everything. Two minutes from now you could be done.</p>
@@ -285,6 +334,12 @@
 <script>
 document.querySelectorAll('.qa button').forEach(b=>{
   b.addEventListener('click',()=>b.parentElement.classList.toggle('open'));
+});
+document.getElementById('copyLink').addEventListener('click',()=>{
+  navigator.clipboard.writeText('https://abdulsami026-crypto.github.io/resume-builder-web/').then(()=>{
+    var m=document.getElementById('copyMsg'); m.style.display='block';
+    setTimeout(()=>{m.style.display='none';},2000);
+  });
 });
 </script>
 </body></html>
