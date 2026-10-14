@@ -220,6 +220,74 @@ textarea.t{min-height:90px; resize:vertical;}
 .tpl-bold .r-role{font-size:16px; text-transform:uppercase; letter-spacing:1px;}
 .tpl-bold .r-sec h2{background:var(--accent); color:#fff; padding:5px 10px; border-bottom:0;
   display:inline-block; border-radius:4px;}
+/* --- Slate: cool minimal (free) --- */
+.tpl-slate h1.r-name{font-weight:800; color:#1e293b;}
+.tpl-slate .r-role{color:#475569;}
+.tpl-slate .r-sec h2{color:#1e293b; border-bottom:2px solid #94a3b8;}
+.tpl-slate .r-contact{color:#64748b;}
+/* --- Paper: warm classic (free) --- */
+.tpl-paper{background:#fdfbf5;}
+.tpl-paper .r-head{text-align:center;}
+.tpl-paper h1.r-name{font-family:Georgia,"Times New Roman",serif; font-size:30px; color:#3f2f1d;}
+.tpl-paper .r-role{font-family:Georgia,serif; color:#8a6d3b;}
+.tpl-paper .r-sec h2{font-family:Georgia,serif; text-align:center; letter-spacing:3px;
+  color:#8a6d3b; border-bottom:1px solid #e0d5bd;}
+.tpl-paper .r-item .rh{display:block;}
+.tpl-paper .r-item .rd{display:block; margin-top:1px;}
+/* --- Aurora: gradient band --- */
+.tpl-aurora{padding:0; overflow:hidden;}
+.tpl-aurora .r-band{background:linear-gradient(120deg,#7c3aed,#1d4ed8); color:#fff; padding:30px 36px 24px;}
+.tpl-aurora .r-band h1.r-name{color:#fff;}
+.tpl-aurora .r-band .r-role{color:#fff; opacity:.92;}
+.tpl-aurora .r-band .r-contact{color:#fff; opacity:.85;}
+.tpl-aurora .r-body{padding:8px 36px 34px;}
+.tpl-aurora .r-photo{border:3px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,.25);}
+/* --- Sunset: warm band --- */
+.tpl-sunset{padding:0; overflow:hidden;}
+.tpl-sunset .r-band{background:linear-gradient(120deg,#c2410c,#f59e0b); color:#fff; padding:30px 36px 24px;}
+.tpl-sunset .r-band h1.r-name{color:#fff;}
+.tpl-sunset .r-band .r-role{color:#fff; opacity:.92;}
+.tpl-sunset .r-band .r-contact{color:#fff; opacity:.85;}
+.tpl-sunset .r-body{padding:8px 36px 34px;}
+.tpl-sunset .r-photo{border:3px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,.25);}
+/* --- Mono: strict black & white --- */
+.tpl-mono h1.r-name{font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#111;}
+.tpl-mono .r-role{color:#111; text-transform:uppercase; font-size:13px; letter-spacing:.8px;}
+.tpl-mono .r-sec h2{color:#111; border-bottom:2px solid #111;}
+.tpl-mono .r-contact{color:#555;}
+.tpl-mono .r-item .rt{color:#111;}
+/* --- Fern: green minimal --- */
+.tpl-fern h1.r-name{color:#14532d; font-weight:800;}
+.tpl-fern .r-role{color:#15803d;}
+.tpl-fern .r-sec h2{color:#166534; border-bottom:2px solid #86efac;}
+/* --- Aero: airy --- */
+.tpl-aero{font-size:14px; line-height:1.7; padding:46px 44px;}
+.tpl-aero h1.r-name{font-weight:300; font-size:34px; letter-spacing:1px; color:#0f172a;}
+.tpl-aero .r-role{font-weight:500; color:#475569;}
+.tpl-aero .r-sec{margin-top:26px;}
+.tpl-aero .r-sec h2{border-bottom:1px solid #e2e8f0; color:#0f172a; font-weight:600;}
+.tpl-aero .r-item{margin-bottom:15px;}
+/* --- Glacier / Midnight / Ruby: sidebar variants --- */
+.tpl-glacier .r-side .r-photo, .tpl-midnight .r-side .r-photo, .tpl-ruby .r-side .r-photo{border:3px solid rgba(255,255,255,.85);}
+.tpl-midnight .r-side .r-sec h2{border-bottom-color:#f59e0b;}
+.tpl-midnight .r-main h1.r-name{color:#0b1226;}
+.tpl-ruby .r-main .r-sec h2{color:#991b1b; border-bottom-color:#991b1b;}
+/* --- Linen: warm centered serif --- */
+.tpl-linen{background:#faf7f0;}
+.tpl-linen .r-head{text-align:center;}
+.tpl-linen h1.r-name{font-family:Georgia,"Times New Roman",serif; font-size:31px; color:#44403c;}
+.tpl-linen .r-role{font-family:Georgia,serif; font-style:italic; font-weight:400; color:#a16207;}
+.tpl-linen .r-sec h2{font-family:Georgia,serif; text-align:center; letter-spacing:2.5px;
+  color:#a16207; border-bottom:1px solid #e7e0cf;}
+.tpl-linen .r-item .rh{display:block;}
+.tpl-linen .r-item .rd{display:block; margin-top:1px;}
+/* --- Folio: portrait variant --- */
+.tpl-folio .r-phead{display:flex; gap:18px; align-items:center; background:#eef2f7;
+  margin:-38px -36px 0; padding:30px 36px;}
+.tpl-folio .r-phead .r-photo{width:110px; height:110px; flex:0 0 auto; margin:0;
+  border:4px solid #fff; box-shadow:0 3px 10px rgba(0,0,0,.18);}
+.tpl-folio h1.r-name{font-size:28px;}
+.tpl-folio .r-sec h2{border-bottom:2px solid var(--accent); display:inline-block; padding:0 2px 4px;}
 </style>
 </head>
 <body>
@@ -241,7 +309,7 @@ textarea.t{min-height:90px; resize:vertical;}
   </div>
   <div class="card" id="premiumCard">
     <div class="sec-title">👑 Premium — $9 one-time</div>
-    <div class="hint">Unlocks 10 extra designer templates. Pay once, yours forever, works fully offline.</div>
+    <div class="hint">Unlocks 20 extra designer templates. Pay once, yours forever, works fully offline.</div>
     <div class="btnrow"><button class="btn gold" id="btnPremiumHome">Get Premium</button></div>
   </div>
 </div>
@@ -302,7 +370,7 @@ textarea.t{min-height:90px; resize:vertical;}
   </div>
   <div class="card hidden" id="tab-design">
     <div class="sec-title">Template</div>
-    <div class="hint" id="designPremHint" style="display:none; margin:0 0 10px;">👑 Premium active — all 13 templates unlocked.</div>
+    <div class="hint" id="designPremHint" style="display:none; margin:0 0 10px;">👑 Premium active — all 25 templates unlocked.</div>
     <div class="tplgrid" id="tplGrid"></div>
     <label class="f" style="margin-top:16px;">Photo style</label>
     <div class="btnrow" id="photoShapeRow" style="margin-top:8px;"></div>
@@ -323,7 +391,7 @@ textarea.t{min-height:90px; resize:vertical;}
     <h2>👑 Resume Builder Premium</h2>
     <div class="okmsg" id="premActive" style="display:none; margin-top:0;">👑 Premium is active on this device — all templates unlocked.</div>
     <div class="price"><b>$9 one-time.</b> No subscription, no account, works fully offline.</div>
-    <div class="feat"><span class="k">🎨</span><span><b>10 extra designer templates</b> — Executive, Creative, Compact, Elegant, Bold, Onyx, Cobalt, Stone, Portrait, Timeline.</span></div>
+    <div class="feat"><span class="k">🎨</span><span><b>20 extra designer templates</b> — Aurora, Sunset, Mono, Fern, Aero, Glacier, Midnight, Ruby, Linen, Folio, plus Executive, Creative, Compact, Elegant, Bold, Onyx, Cobalt, Stone, Portrait and Timeline.</span></div>
     <div class="feat"><span class="k">📄</span><span>Every template exports to a crisp A4 PDF.</span></div>
     <div class="feat"><span class="k">🔑</span><span>One key works on all your devices. Free updates forever.</span></div>
     <div class="btnrow" id="buyRow"><button class="btn gold block" id="btnBuy">Buy Premium — $9</button></div>
@@ -354,19 +422,31 @@ const ACCENTS = ["#1d4ed8","#0f766e","#7c3aed","#be123c","#b45309","#0e7490","#4
 
 /* template id -> {name, free?, pdf style, swatch gradient} */
 const TEMPLATES = [
-  {id:"minimal",   name:"Minimal",   free:true,  pdf:"minimal", sw:"#e8edf5"},
-  {id:"modern",     name:"Modern",    free:true,  pdf:"band",    sw:"#1d4ed8"},
-  {id:"classic",    name:"Classic",   free:true,  pdf:"classic", sw:"#f5f1e6"},
-  {id:"executive",  name:"Executive", free:false, pdf:"band",    sw:"#141a26"},
-  {id:"creative",   name:"Creative",  free:false, pdf:"minimal", sw:"#7c3aed"},
-  {id:"compact",    name:"Compact",   free:false, pdf:"minimal", sw:"#0e7490"},
-  {id:"elegant",    name:"Elegant",   free:false, pdf:"classic", sw:"#f3ead3"},
-  {id:"bold",       name:"Bold",      free:false, pdf:"band",    sw:"#be123c"},
-  {id:"onyx",       name:"Onyx",      free:false, pdf:"sidebar", sb:"dark",   sw:"#161c28"},
-  {id:"cobalt",     name:"Cobalt",    free:false, pdf:"sidebar", sb:"accent", sw:"#1d4ed8"},
-  {id:"stone",      name:"Stone",     free:false, pdf:"sidebar", sb:"light",  sw:"#e9edf3"},
-  {id:"portrait",   name:"Portrait",  free:false, pdf:"band",    sw:"#0e7490"},
-  {id:"timeline",   name:"Timeline",  free:false, pdf:"minimal", sw:"#4d7c0f"},
+  {id:"minimal",   name:"Minimal",   free:true,  pdf:"minimal", lay:"std",    sw:"#e8edf5"},
+  {id:"modern",     name:"Modern",    free:true,  pdf:"band",    lay:"band",   sw:"#1d4ed8"},
+  {id:"classic",    name:"Classic",   free:true,  pdf:"classic", lay:"center", sw:"#f5f1e6"},
+  {id:"slate",      name:"Slate",     free:true,  pdf:"minimal", lay:"std",    sw:"#64748b"},
+  {id:"paper",      name:"Paper",     free:true,  pdf:"classic", lay:"center", sw:"#f5efe0"},
+  {id:"executive",  name:"Executive", free:false, pdf:"band",    lay:"band",   sw:"#141a26"},
+  {id:"creative",   name:"Creative",  free:false, pdf:"minimal", lay:"std",    sw:"#7c3aed"},
+  {id:"compact",    name:"Compact",   free:false, pdf:"minimal", lay:"std",    sw:"#0e7490"},
+  {id:"elegant",    name:"Elegant",   free:false, pdf:"classic", lay:"center", sw:"#f3ead3"},
+  {id:"bold",       name:"Bold",      free:false, pdf:"band",    lay:"std",    sw:"#be123c"},
+  {id:"onyx",       name:"Onyx",      free:false, pdf:"sidebar", lay:"side",  sb:"dark",   sw:"#161c28"},
+  {id:"cobalt",     name:"Cobalt",    free:false, pdf:"sidebar", lay:"side",   sb:"accent", sw:"#1d4ed8"},
+  {id:"stone",      name:"Stone",     free:false, pdf:"sidebar", lay:"side",   sb:"light",  sw:"#e9edf3"},
+  {id:"portrait",   name:"Portrait",  free:false, pdf:"band",    lay:"phead",  sw:"#0e7490"},
+  {id:"timeline",   name:"Timeline",  free:false, pdf:"minimal", lay:"std",    sw:"#4d7c0f"},
+  {id:"aurora",     name:"Aurora",    free:false, pdf:"band",    lay:"band",   sw:"#7c3aed"},
+  {id:"sunset",     name:"Sunset",    free:false, pdf:"band",    lay:"band",   sw:"#ea580c"},
+  {id:"mono",       name:"Mono",      free:false, pdf:"minimal", lay:"std",    sw:"#181818"},
+  {id:"fern",       name:"Fern",      free:false, pdf:"minimal", lay:"std",    sw:"#166534"},
+  {id:"aero",       name:"Aero",      free:false, pdf:"minimal", lay:"std",    sw:"#dbe4f0"},
+  {id:"glacier",    name:"Glacier",   free:false, pdf:"sidebar", lay:"side",   sb:"light", sbg:"#dbeafe", stx:"#1e3a5f", smut:"#5b7a99", sw:"#bfdbfe"},
+  {id:"midnight",   name:"Midnight",  free:false, pdf:"sidebar", lay:"side",   sb:"dark",  sbg:"#0b1226", stx:"#ffffff", smut:"#aebad6", sw:"#0b1226"},
+  {id:"ruby",       name:"Ruby",      free:false, pdf:"sidebar", lay:"side",   sb:"accent",sbg:"#7f1d1d", stx:"#ffffff", smut:"#f3c1c1", sw:"#991b1b"},
+  {id:"linen",      name:"Linen",     free:false, pdf:"classic", lay:"center", sw:"#e7e0cf"},
+  {id:"folio",      name:"Folio",     free:false, pdf:"band",    lay:"phead",  sw:"#0e7490"},
 ];
 function tplOf(id){ return TEMPLATES.find(t=>t.id===id) || TEMPLATES[0]; }
 
@@ -606,6 +686,7 @@ function addSkill(){ const r=getR(); if(!r) return;
 function dateRange(e){ const s=(e.start||"").trim(); let en=(e.end||"").trim();
   if(e.current) en="Present"; if(s&&en) return s+" – "+en; return s||en; }
 function sidebarColors(t,acc){
+  if(t.sbg) return {bg:t.sbg, tx:t.stx||"#ffffff", mut:t.smut||"#c3cad6"};
   if(t.sb==="dark") return {bg:"#161c28", tx:"#ffffff", mut:"#c3cad6"};
   if(t.sb==="light") return {bg:"#e9edf3", tx:"#1a2230", mut:"#5b6472"};
   return {bg:acc, tx:"#ffffff", mut:"#ffffff"}; // accent sidebar
@@ -619,14 +700,14 @@ function resumeHtml(r){
   const name=esc(p.fullName||"Your Name"), role=esc(p.title||"");
 
   let head="";
-  if(t.id==="portrait"){
+  if(t.lay==="phead"){
     head='<div class="r-phead">'+photo+'<div><h1 class="r-name">'+name+'</h1>'+
       (role?'<div class="r-role">'+role+'</div>':"")+(contact?'<div class="r-contact">'+contact+'</div>':"")+'</div></div>';
-  } else if(t.id==="modern"||t.id==="executive"){
+  } else if(t.lay==="band"){
     head='<div class="r-band"><div style="display:flex;justify-content:space-between;align-items:center;gap:14px;">'+
       '<div><h1 class="r-name">'+name+'</h1>'+(role?'<div class="r-role">'+role+'</div>':"")+
       (contact?'<div class="r-contact">'+contact+'</div>':"")+'</div>'+photo+'</div></div><div class="r-body">';
-  } else if(t.id==="classic"||t.id==="elegant"){
+  } else if(t.lay==="center"){
     head='<div class="r-head">'+(photo?'<div style="text-align:center;margin-bottom:8px;">'+photo+'</div>':"")+
       '<h1 class="r-name">'+name+'</h1>'+(role?'<div class="r-role">'+role+'</div>':"")+
       (contact?'<div class="r-contact">'+contact+'</div>':"")+'</div>';
@@ -635,7 +716,7 @@ function resumeHtml(r){
       (role?'<div class="r-role">'+role+'</div>':"")+(contact?'<div class="r-contact">'+contact+'</div>':"")+
       '<div style="clear:both;"></div></div>';
   }
-  const closeBand=(t.id==="modern"||t.id==="executive")?"</div>":"";
+  const closeBand=(t.lay==="band")?"</div>":"";
 
   let expInner="";
   (r.experience||[]).forEach(e=>{
@@ -785,7 +866,7 @@ function updateHomePremium(){
   if(_premiumCardHtml===null) _premiumCardHtml=card.innerHTML;
   if(premium){
     card.innerHTML='<div class="sec-title">👑 Premium active ✓</div>'+
-      '<div class="hint">All 13 templates are unlocked. Open a resume and pick any template in the Design tab.</div>'+
+      '<div class="hint">All 25 templates are unlocked. Open a resume and pick any template in the Design tab.</div>'+
       '<div class="btnrow"><button class="btn ghost block" id="btnPremView">View premium details</button></div>';
     $("btnPremView").onclick=openPremium;
   } else {
