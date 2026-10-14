@@ -70,15 +70,21 @@
   .sec-head p{color:var(--mut);font-size:17.5px;}
 
   /* gallery */
-  #templates{background:var(--bg);}
-  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  #templates{background:linear-gradient(180deg,#0b1734 0%,#070f26 100%);color:#fff;}
+  #templates .kicker{color:#93c5fd;}
+  #templates .sec-head h2{color:#fff;}
+  #templates .sec-head p{color:#aebad6;}
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
   @media(max-width:900px){.gal{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:560px){.gal{grid-template-columns:1fr;}}
-  .tcard{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(20,30,60,.06);transition:transform .15s,box-shadow .15s;}
-  .tcard:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(20,30,60,.12);}
-  .tcard .im{aspect-ratio:4/5;overflow:hidden;background:#eef1f7;}
-  .tcard img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
-  .tcard .nm{padding:14px 18px;display:flex;justify-content:space-between;align-items:center;font-weight:700;}
+  .tcard{background:#101f45;border:1px solid rgba(255,255,255,.09);border-radius:18px;overflow:hidden;
+    box-shadow:0 10px 34px rgba(0,0,0,.35);transition:transform .18s,box-shadow .18s;}
+  .tcard:hover{transform:translateY(-7px);box-shadow:0 22px 54px rgba(0,0,0,.5);}
+  .tcard .im{aspect-ratio:4/5;overflow:hidden;background:#0a1330;}
+  .tcard img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s;}
+  .tcard:hover img{transform:scale(1.045);}
+  .tcard .nm{padding:16px 20px 4px;display:flex;justify-content:space-between;align-items:center;font-weight:700;color:#fff;font-size:17px;}
+  .tcard .desc{padding:0 20px 18px;color:#8b98b8;font-size:14px;}
   .badge{font-size:12px;font-weight:800;border-radius:999px;padding:4px 11px;}
   .b-free{background:#dcfce7;color:#166534;}
   .b-pro{background:linear-gradient(180deg,#fbbf24,#f59e0b);color:#3a2703;}
@@ -185,12 +191,12 @@
     <p>From clean and minimal to bold sidebar layouts — pick the look that fits the job.</p>
   </div>
   <div class="gal">
-    <div class="tcard"><div class="im"><img src="img/modern.png" alt="Modern template" loading="lazy"></div><div class="nm">Modern <span class="badge b-free">FREE</span></div></div>
-    <div class="tcard"><div class="im"><img src="img/classic.png" alt="Classic template" loading="lazy"></div><div class="nm">Classic <span class="badge b-free">FREE</span></div></div>
-    <div class="tcard"><div class="im"><img src="img/onyx.png" alt="Onyx template" loading="lazy"></div><div class="nm">Onyx <span class="badge b-pro">PRO</span></div></div>
-    <div class="tcard"><div class="im"><img src="img/timeline.png" alt="Timeline template" loading="lazy"></div><div class="nm">Timeline <span class="badge b-pro">PRO</span></div></div>
-    <div class="tcard"><div class="im"><img src="img/portrait.png" alt="Portrait template" loading="lazy"></div><div class="nm">Portrait <span class="badge b-pro">PRO</span></div></div>
-    <div class="tcard"><div class="im"><img src="img/design.png" alt="All templates" loading="lazy"></div><div class="nm">+ 8 more <span class="badge b-pro">PRO</span></div></div>
+    <div class="tcard"><div class="im"><img src="img/modern.png" alt="Modern template" loading="lazy"></div><div class="nm">Modern <span class="badge b-free">FREE</span></div><div class="desc">Clean band header, sharp typography.</div></div>
+    <div class="tcard"><div class="im"><img src="img/classic.png" alt="Classic template" loading="lazy"></div><div class="nm">Classic <span class="badge b-free">FREE</span></div><div class="desc">Timeless centered elegance.</div></div>
+    <div class="tcard"><div class="im"><img src="img/onyx.png" alt="Onyx template" loading="lazy"></div><div class="nm">Onyx <span class="badge b-pro">PRO</span></div><div class="desc">Bold dark sidebar that stands out.</div></div>
+    <div class="tcard"><div class="im"><img src="img/cobalt.png" alt="Cobalt template" loading="lazy"></div><div class="nm">Cobalt <span class="badge b-pro">PRO</span></div><div class="desc">Confident blue sidebar layout.</div></div>
+    <div class="tcard"><div class="im"><img src="img/portrait.png" alt="Portrait template" loading="lazy"></div><div class="nm">Portrait <span class="badge b-pro">PRO</span></div><div class="desc">Photo-forward leadership look.</div></div>
+    <div class="tcard"><div class="im"><img src="img/timeline.png" alt="Timeline template" loading="lazy"></div><div class="nm">Timeline <span class="badge b-pro">PRO</span></div><div class="desc">Your career story on a year rail.</div></div>
   </div>
 </div></section>
 
